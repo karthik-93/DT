@@ -20,7 +20,7 @@ import com.niit.EcommerceBackend.model.Supplier;
 import com.niit.EcommerceBackend.model.User;
 
 @Configuration
-@ComponentScan("com.niit,com.niit.EcommerceBackend")
+@ComponentScan("com.niit.*")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 

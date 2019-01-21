@@ -25,7 +25,7 @@ public class ProductUnittest {
 		productDao = (ProductDao) context.getBean("productDao");
 	}
 
-	@Ignore
+	
 	@Test
 	public void addProducttest() {
 		Product product = new Product();
@@ -36,10 +36,10 @@ public class ProductUnittest {
 		// product.setCategoryId(33);
 		// product.setSupplierId(1);
 
-		product.setProductName("Adidas");
-		product.setProductId(00002);
-		product.setPrice(3000);
-		product.setStock(50);
+		product.setProductName("puma");
+		product.setProductId(3);
+		product.setPrice(2500);
+		product.setStock(500);
 		product.setCategoryId(12);
 		product.setSupplierId(2);
 		// assertTrue("Problem in add product:",productDao.addProduct(product));

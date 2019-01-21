@@ -15,12 +15,11 @@ import com.niit.EcommerceBackend.model.Category;
 import com.niit.EcommerceBackend.model.Product;
 
 @Repository("categoryDao")
-@Service
 @Transactional
 public class CategoryDaoImpl implements CategoryDao {
 	
 	@Autowired
-	SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 	
 	
 	public CategoryDaoImpl(SessionFactory sessionFactory) {

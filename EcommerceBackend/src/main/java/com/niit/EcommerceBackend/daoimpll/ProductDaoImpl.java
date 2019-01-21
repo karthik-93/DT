@@ -15,10 +15,22 @@ import com.niit.EcommerceBackend.model.Product;
 
 @Repository("productDao")
 @Transactional
-
 public class ProductDaoImpl implements ProductDao {
+	
 	@Autowired
-	SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
+	
+	
+	public ProductDaoImpl() {
+		
+		// TODO Auto-generated constructor stub
+	}
+	public ProductDaoImpl(SessionFactory sessionFactory){
+		this.sessionFactory=sessionFactory;
+	}
+	public Session getSession(){
+		return sessionFactory.getCurrentSession();
+	}
 
 	@Override
 	public boolean addProduct(Product product) {
