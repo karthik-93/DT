@@ -32,7 +32,7 @@ public class UserDaoImpl implements UserDao {
 
 	public boolean registerUser(User user) {
 		try {
-			// user.setRole("ROLE_USER");
+			user.setRole("ROLE_USER");
 			sessionFactory.getCurrentSession().saveOrUpdate(user);
 			return true;
 		} catch (Exception e) {

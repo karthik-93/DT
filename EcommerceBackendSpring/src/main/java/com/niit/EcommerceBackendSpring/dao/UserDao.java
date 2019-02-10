@@ -13,4 +13,5 @@ public interface UserDao {
 	public User getUserByUserName(int userId);
 
 	public boolean deleteUser(User user);
+	
 }

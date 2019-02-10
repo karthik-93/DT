@@ -32,7 +32,7 @@ public class ProductDaoImpl implements ProductDao {
 
 	public boolean addProduct(Product product) {
 		try {
-			sessionFactory.getCurrentSession().saveOrUpdate(product);
+			sessionFactory.getCurrentSession().save(product);
 			return true;
 		} catch (Exception e) {
 			return false;
@@ -42,7 +42,7 @@ public class ProductDaoImpl implements ProductDao {
 
 	public boolean updateProduct(Product product) {
 		try {
-			sessionFactory.getCurrentSession().update(product);
+			sessionFactory.getCurrentSession().saveOrUpdate(product);
 			return true;
 		} catch (Exception e) {
 			return false;
@@ -53,6 +53,7 @@ public class ProductDaoImpl implements ProductDao {
 	
 	public List<Product> listProducts() {
 		return sessionFactory.getCurrentSession().createQuery("From Product").list();
+		
 	}
 
 	

@@ -28,7 +28,7 @@ public class CategoryDaoImpl implements CategoryDao {
 	}
 
 	public Session getSession() {
-		return sessionFactory.getCurrentSession();
+		return sessionFactory.getCurrentSession(); 
 	}
 
 

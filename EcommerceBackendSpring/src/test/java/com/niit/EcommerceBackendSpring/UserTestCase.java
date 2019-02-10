@@ -13,8 +13,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.niit.EcommerceBackendSpring.dao.UserDao;
 import com.niit.EcommerceBackendSpring.model.User;
 
-
-
 public class UserTestCase {
 
 	@Autowired
@@ -37,7 +35,7 @@ public class UserTestCase {
 	@Ignore
 	@Test
 	public void insertUser() {
-		user.setUsername("Mohan");
+		user.setUsername("Karthik Murari");
 		user.setPassword("pass123");
 		
 		user.setCustomerAddr("Mumbai");

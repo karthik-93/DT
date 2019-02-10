@@ -44,7 +44,7 @@ public class ProductController {
 	@Autowired
 	SupplierDao supplierDao;
 
-	@RequestMapping("/")
+	@RequestMapping("/hom1")
 	public ModelAndView displayIndex() {
 		ModelAndView mv = new ModelAndView("index");
 		List<Product> plist = productDao.listProducts();
@@ -67,17 +67,17 @@ public class ProductController {
 		return "register";
 	}
 
-	@RequestMapping("home")
+	@RequestMapping("/home")
 	public String homeReturn() {
 		return "index";
 	}
 
-	@RequestMapping("login")
-	public String loginReturn() {
-		return "login";
-	}
+//	@RequestMapping("/login")
+//	public String loginReturn() {
+//		return "login";
+//	}
 
-	@RequestMapping("example")
+	@RequestMapping("/ddd")
 	public ModelAndView addProducts(@ModelAttribute("prod") Product product) {
 
 		ModelAndView mv = new ModelAndView("admin");
@@ -95,7 +95,7 @@ public class ProductController {
 
 	}
 
-	@RequestMapping("example1")
+	@RequestMapping("/adm")
 	public String showPro() {
 		return "Admintask";
 	}
@@ -110,11 +110,11 @@ public class ProductController {
 	}
 
 	@RequestMapping("/saveProd")
-	public ModelAndView addPro(@ModelAttribute("product") Product product, final RedirectAttributes redirects,
+	public String addPro(@ModelAttribute("product") Product product, final RedirectAttributes redirects,
 			HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView("productadding");
 		System.out.println("adding product" + product.getProductName());
-		boolean res = productDao.addProduct(product);
+		boolean res = productDao.updateProduct(product);
 		MultipartFile itemimage = product.getPimage();
 		String rootdir = request.getSession().getServletContext().getRealPath("/");
 		System.out.println("UUUUUUUUUUUUUUUUU " + rootdir);
@@ -130,7 +130,7 @@ public class ProductController {
 			}
 		}
 
-		return mv;
+		return "redirect:/showallpro";
 
 	}
 
@@ -142,11 +142,11 @@ public class ProductController {
 	}
 
 	@RequestMapping("/saveCat")
-	public ModelAndView addCattt(@ModelAttribute("category") Category category, final RedirectAttributes redirects) {
+	public String addCattt(@ModelAttribute("category") Category category, final RedirectAttributes redirects) {
 		ModelAndView mv = new ModelAndView("addctgg");
 		System.out.println("adding category" + category.getCategoryName());
 		boolean res = categoryDao.addCategory(category);
-		return mv;
+		return "redirect:/showallcat";
 	}
 
 	@RequestMapping("AddSupp")
@@ -157,11 +157,11 @@ public class ProductController {
 	}
 
 	@RequestMapping("/savesupp")
-	public ModelAndView addsup(@ModelAttribute("supplier") Supplier supplier, final RedirectAttributes redirects) {
+	public String addsup(@ModelAttribute("supplier") Supplier supplier, final RedirectAttributes redirects) {
 		ModelAndView mv = new ModelAndView("addSupp");
 		System.out.println("adding supplier" + supplier.getSupplierName());
 		boolean res = supplierDao.addSupplier(supplier);
-		return mv;
+		return "redirect:/showallsup";
 	}
 
 	@RequestMapping("/example2")
@@ -199,13 +199,12 @@ public class ProductController {
 	}
 
 	@RequestMapping("/deletepro")
-	public ModelAndView deleteProduct(@RequestParam(value = "Id", required = true) int productId,
+	public String deleteProduct(@RequestParam(value = "Id", required = true) int productId,
 			final RedirectAttributes redirects) {
 		ModelAndView mv = new ModelAndView("showAllProducts");
 		Product product = productDao.getProductbyProductname(productId);
 		productDao.deleteProduct(product);
-		return mv;
-	}
+		return "redirect:/showallpro";	}
 
 	@RequestMapping("showallpro")
 	public ModelAndView displayAllProList() {
@@ -246,6 +245,16 @@ public class ProductController {
 		return mv;
 	}
 
+	@RequestMapping("showallsup")
+	public ModelAndView displayAllSupList() {
+		ModelAndView mv = new ModelAndView("showAllSuppliers");
+		List<Supplier> slist = supplierDao.listSuppliers();
+		mv.addObject("sList", slist);
+		System.out.println(slist.size());
+		mv.addObject("msg", "Hello world");
+		return mv;
+	}
+	
 	@RequestMapping("showallcat")
 	public ModelAndView displayAllCatList() {
 		ModelAndView mv = new ModelAndView("showAllCategories");
@@ -255,5 +264,12 @@ public class ProductController {
 		mv.addObject("msg", "Hello world");
 		return mv;
 	}
+	
+	@RequestMapping("backadmin")
+		public String backAdmin(){
+			return "Admintask";
+		}
 
 }
+
+
