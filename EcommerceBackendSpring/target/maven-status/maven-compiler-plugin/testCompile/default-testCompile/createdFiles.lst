@@ -3,3 +3,4 @@ com\niit\EcommerceBackendSpring\CategoryTestCase.class
 com\niit\EcommerceBackendSpring\ProductTestCase.class
 com\niit\EcommerceBackendSpring\UserTestCase.class
 com\niit\EcommerceBackendSpring\SupplierTestCase.class
+com\niit\EcommerceBackendSpring\CartTestCase.class

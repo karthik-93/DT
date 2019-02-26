@@ -36,7 +36,7 @@ public class ProductTestCase {
 	@Ignore
 	@Test
 	public void insertProduct() {
-		product.setProductId(211);
+		
 		product.setProductName("Slee");
 		product.setProductDesc("Blue T-Shirt");
 		product.setPrice(2580);

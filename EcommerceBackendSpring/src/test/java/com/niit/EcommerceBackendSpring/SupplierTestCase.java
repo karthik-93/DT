@@ -37,7 +37,7 @@ public class SupplierTestCase {
 	@Test
 	public void test() {
 		Supplier supplier = new Supplier();
-		supplier.setSupplierName("KLN");
+		supplier.setSupplierName("MKK");
 		supplier.setSupplierAddr("bangalore");
 
 		assertTrue("Problem in add Supplier:", supplierDao.addSupplier(supplier));

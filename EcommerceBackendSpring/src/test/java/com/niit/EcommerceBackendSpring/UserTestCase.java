@@ -32,13 +32,15 @@ public class UserTestCase {
 		userDao = (UserDao) context.getBean("userDao");
 		user = context.getBean(User.class);
 	}
-	@Ignore
+	
+	
 	@Test
 	public void insertUser() {
-		user.setUsername("Karthik Murari");
+		user.setUsername("Madhan");
 		user.setPassword("pass123");
-		
+		user.setRole("ROLE_USER");
 		user.setCustomerAddr("Mumbai");
+		user.setEnabled(true);
 		boolean flag = userDao.registerUser(user);
 		assertEquals("problem in inserting user", true, flag);
 	}

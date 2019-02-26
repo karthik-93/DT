@@ -1,9 +1,17 @@
 package com.niit.EcommerceFrontendSpring.controllers;
 
+import java.util.Collection;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,17 +29,7 @@ public class LoginController {
 	User user;
 	@Autowired
 	ProductDao productDao;
-	 //Spring Security related******************************************************************************
-	 @RequestMapping("/auth")
-		public String getAuthenticate()
-		{
-			return "auths";
-		}
-//	 @RequestMapping("/login")
-//		public String getLog()
-//		{
-//			return "login";
-//		}
+	 
 	 @RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 		public ModelAndView defaultPage() {
 		 	System.out.println("Don1111111111111111111111");
@@ -44,37 +42,52 @@ public class LoginController {
 			return model;
 
 		}
-	 @RequestMapping(value = "/login", method = RequestMethod.GET)
-		public ModelAndView getLogin(@RequestParam(value = "error", required = false) String error,
-				@RequestParam(value = "logout", required = false) String logout, final RedirectAttributes redirectAttributes) {
-		 		System.out.println("login page");
-			ModelAndView model = new ModelAndView("login");
-//			String surl="";
-//			if (error != null) {
-//				model.addObject("error", "Invalid username and password!");
-//				System.out.println("Error HERRRRRRRRRe");
-////				model.setViewName("SingInPage");
-//				return "login";
-//			}
-//
-//			else if (logout != null) {
-//				model.addObject("msg", "you have loggedout duccessfully");
-//				System.out.println("LogOut");
-////				model.setViewName("LandingPage");
-//				return "redirect:hom1";
-//				
-//			}
-//			else
-//			{
-//			System.out.println("some error");
-//			model.setViewName("auths");
-//			return "auths";
-//			}
-			
-			return model;
-
+		@RequestMapping("/login")
+		public String showLogin(Model m)
+		{
+		    m.addAttribute("pageinfo" , "Login");
+			return "login";
 		}
-	 
-	 
+		@RequestMapping(value="/login_success") 
+		public String loginCheck(Model m, HttpSession session)
+		{
+			String page="";
+			boolean loggedIn=false;
+			
+			SecurityContext securitycontext=SecurityContextHolder.getContext();
+			Authentication authentication=securitycontext.getAuthentication();
+			
+			
+			String username=authentication.getName();
+			
+			Collection<GrantedAuthority> roles=(Collection<GrantedAuthority>)authentication.getAuthorities();
+			
+			for(GrantedAuthority role:roles)
+			{
+				session.setAttribute("role", role.getAuthority());;
+			if(role.getAuthority().equals("ROLE_ADMIN"))
+			{
+				loggedIn=true;
+				page="Admintask";
+				session.setAttribute("loggedIn", loggedIn);
+				session.setAttribute("username", username);
+			}
+			else
+			{
+				m.addAttribute("pageinfo" , "User Home");
+				List<Product> listProducts = productDao.listProducts();
+				m.addAttribute("pList", listProducts);
+				loggedIn=true;
+				page="UserPage";
+				session.setAttribute("loggedIn",loggedIn);
+				session.setAttribute("username",username);
+			}
+			}
+			
+			
+			return page;
+		}
+	
 
+	 
 }

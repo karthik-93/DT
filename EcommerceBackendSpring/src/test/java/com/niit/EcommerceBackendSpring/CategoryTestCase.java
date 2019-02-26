@@ -37,7 +37,7 @@ public class CategoryTestCase {
 	@Test
 	public void addCategoryTest() {
 		Category category = new Category();
-		category.setCategoryName("Category5");
+		category.setCategoryName("new Category");
 		category.setCategoryDesc("Rounirt of all Variety");
 		boolean res = categoryDao.addCategory(category);
 		assertEquals("problem in inserting  the data", true, res);

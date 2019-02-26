@@ -16,9 +16,11 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.niit.EcommerceBackendSpring.dao.CartDao;
 import com.niit.EcommerceBackendSpring.dao.CategoryDao;
 import com.niit.EcommerceBackendSpring.dao.ProductDao;
 import com.niit.EcommerceBackendSpring.dao.SupplierDao;
+import com.niit.EcommerceBackendSpring.model.Cart;
 import com.niit.EcommerceBackendSpring.model.Category;
 import com.niit.EcommerceBackendSpring.model.Product;
 import com.niit.EcommerceBackendSpring.model.Supplier;
@@ -43,6 +45,12 @@ public class ProductController {
 
 	@Autowired
 	SupplierDao supplierDao;
+	
+	@Autowired
+	Cart cart;
+	
+	@Autowired
+	CartDao cartDao;
 
 	@RequestMapping("/hom1")
 	public ModelAndView displayIndex() {
@@ -269,6 +277,18 @@ public class ProductController {
 		public String backAdmin(){
 			return "Admintask";
 		}
+	
+	@RequestMapping("tableCart")
+	public String displayCart(@RequestParam(value="Id",required=true) int productId) {
+		List<Cart> ctList = cartDao.listCartItems(username);
+		int cnt = ctList.size();
+		cnt = cnt+1;
+		cart.setCartId(cnt);
+		cart.setProductId(productId);
+		cart.setPrice(product.getPrice());
+		cartDao.addCartItem(cart);
+		return "redirect:prodETAIL?Id="+productId;
+	}
 
 }
 

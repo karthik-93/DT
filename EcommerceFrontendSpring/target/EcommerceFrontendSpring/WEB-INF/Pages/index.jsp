@@ -32,7 +32,7 @@
    
 </head>
 <body>
-<%@include file="navigate.jsp"%>
+<%@include file="header.jsp"%>
 	<%@include file="Carousel1.jsp"%>
 	<%@include file="Products.jsp"%>
 	

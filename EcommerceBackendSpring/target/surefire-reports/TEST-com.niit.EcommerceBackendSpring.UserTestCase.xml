@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.niit.EcommerceBackendSpring.UserTestCase" time="0" errors="0" skipped="4">
+<testsuite tests="4" failures="0" name="com.niit.EcommerceBackendSpring.UserTestCase" time="6.425" errors="0" skipped="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\bin"/>
     <property name="java.vm.version" value="25.191-b12"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\Project FE and BE\EcommerceBackendSpring"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Project FE and BE\EcommerceBackendSpring"/>
+    <property name="user.dir" value="C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring"/>
     <property name="java.runtime.version" value="1.8.0_191-b12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\endorsed"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="D:\Project-Karthik\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7100739119856094176.tmp"/>
+    <property name="classworlds.conf" value="D:\Project\projectlatest\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3129787031818270347.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_191/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_191/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_191/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Program Files\Java\jdk1.8.0_191\bin;C:\Users\MBG\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\MBG\Downloads\eclipse-jee-oxygen-R-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -53,7 +53,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_191\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="D:\Project FE and BE\EcommerceBackendSpring\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,16 +61,83 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.niit.EcommerceBackendSpring.UserTestCase" name="updateUser" time="0">
+  <testcase classname="com.niit.EcommerceBackendSpring.UserTestCase" name="updateUser" time="3.028">
+    <skipped/>
+    <system-err>Feb 25, 2019 3:16:25 PM org.springframework.context.annotation.AnnotationConfigApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@16c0663d: startup date [Mon Feb 25 15:16:25 IST 2019]; root of context hierarchy
+Feb 25, 2019 3:16:26 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager &lt;clinit&gt;
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+Feb 25, 2019 3:16:26 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.3.8.Final}
+Feb 25, 2019 3:16:26 PM org.hibernate.cfg.Environment &lt;clinit&gt;
+INFO: HHH000206: hibernate.properties not found
+Feb 25, 2019 3:16:26 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Feb 25, 2019 3:16:26 PM org.hibernate.dialect.Dialect &lt;init&gt;
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Feb 25, 2019 3:16:26 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Feb 25, 2019 3:16:26 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory &lt;init&gt;
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Feb 25, 2019 3:16:26 PM org.hibernate.validator.internal.util.Version &lt;clinit&gt;
+INFO: HV000001: Hibernate Validator 5.4.1.Final
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000228: Running hbm2ddl schema update
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000102: Fetching database metadata
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000396: Updating schema
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000261: Table found: ECDB.PUBLIC.CART
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000037: Columns: [quantity, productid, price, cartid, id_userid, productname, paymentstatus, productprice, username]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000108: Foreign keys: []
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000126: Indexes: [primary_key_4fb]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000261: Table found: ECDB.PUBLIC.CATEGORY
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000037: Columns: [categorydesc, categoryname, category, categoryid]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000108: Foreign keys: []
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000126: Indexes: [primary_key_f]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000261: Table found: ECDB.PUBLIC.PRODUCT
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000037: Columns: [supplierid, productid, price, productname, stock, category, categoryid, productdesc]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000108: Foreign keys: []
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000126: Indexes: [primary_key_18]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000261: Table found: ECDB.PUBLIC.SUPPLIER
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000037: Columns: [supplieraddr, suppliername, supplierid]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000108: Foreign keys: []
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000126: Indexes: [primary_key_c]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000261: Table found: ECDB.PUBLIC.USER
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000037: Columns: [customeraddr, password, role, emailid, customername, userid, enabled, username]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000108: Foreign keys: []
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.TableMetadata &lt;init&gt;
+INFO: HHH000126: Indexes: [primary_key_c0]
+Feb 25, 2019 3:16:27 PM org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: HHH000232: Schema update complete
+Feb 25, 2019 3:16:27 PM org.springframework.orm.hibernate4.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.apache.commons.dbcp2.BasicDataSource@6f03482] of Hibernate SessionFactory for HibernateTransactionManager
+</system-err>
+  </testcase>
+  <testcase classname="com.niit.EcommerceBackendSpring.UserTestCase" name="listMethod" time="3.03">
     <skipped/>
   </testcase>
-  <testcase classname="com.niit.EcommerceBackendSpring.UserTestCase" name="listMethod" time="0">
-    <skipped/>
-  </testcase>
-  <testcase classname="com.niit.EcommerceBackendSpring.UserTestCase" name="insertUser" time="0">
-    <skipped/>
-  </testcase>
-  <testcase classname="com.niit.EcommerceBackendSpring.UserTestCase" name="deleteUser" time="0">
+  <testcase classname="com.niit.EcommerceBackendSpring.UserTestCase" name="insertUser" time="0.183"/>
+  <testcase classname="com.niit.EcommerceBackendSpring.UserTestCase" name="deleteUser" time="0.184">
     <skipped/>
   </testcase>
 </testsuite>

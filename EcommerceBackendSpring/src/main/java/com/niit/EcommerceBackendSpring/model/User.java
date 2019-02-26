@@ -18,7 +18,7 @@ public class User {
 	String password;
 	String role; 
 	boolean enabled;
-	String customerName;//change to emailid
+	String emailId;
 	String customerAddr;
 	
 	public int getUserId() {
@@ -51,11 +51,12 @@ public class User {
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
-	public String getCustomerName() {
-		return customerName;
+	
+	public String getEmailId() {
+		return emailId;
 	}
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 	public String getCustomerAddr() {
 		return customerAddr;

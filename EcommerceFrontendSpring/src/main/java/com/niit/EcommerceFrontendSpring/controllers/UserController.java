@@ -33,45 +33,6 @@ public class UserController
 		return "Products";
 	}
 	
-//	@RequestMapping(value="/login_success")
-//	public String loginCheck(Model m,HttpSession session)
-//	{
-//		String page="";
-//		boolean loggedIn=false;
-//		
-//		SecurityContext securityContext=SecurityContextHolder.getContext();
-//		Authentication authentication=securityContext.getAuthentication();
-//		
-//		String username=authentication.getName();
-//		
-//		Collection<GrantedAuthority> roles=(Collection<GrantedAuthority>)authentication.getAuthorities();
-//	
-//		for(GrantedAuthority role:roles)
-//		{
-//			session.setAttribute("role", role.getAuthority());
-//			
-//			if(role.getAuthority().equals("ROLE_ADMIN"))
-//			{
-//				loggedIn=true;
-//				page="AdminPage";
-//				session.setAttribute("loggedIn", loggedIn);
-//				session.setAttribute("username", username);
-//			}
-//			else
-//			{
-//				m.addAttribute("pageinfo", "User Home");
-//				List<Product> listProducts=productDao.listProducts();
-//				m.addAttribute("productList", listProducts);
-//				
-//				loggedIn=true;
-//				page="UserPage";
-//				session.setAttribute("loggedIn", loggedIn);
-//				session.setAttribute("username", username);
-//			}
-//		}
-//		
-//		
-//		return page;
-//	}
+
 }
 
