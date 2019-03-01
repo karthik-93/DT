@@ -68,8 +68,9 @@
 					<p>
 						<strong><h4 style="color: black">Description:${product.productDesc}</h4></strong>
 					</p>
-					<a href="#" class="btn btn-primary" role="button">BUY NOW </a> 
-					<a href="tableCart?Id=${product.productId}" class="btn btn-primary" role="button">ADD TO CART </a>
+					<a href="addCart?Id=${product.productId}" class="btn btn-primary" role="button">ADD TO CART </a>
+					<a href="home" class="btn btn-primary" role="button">Add More Products </a>
+					
 				</div>
 			</div>
 		</div>

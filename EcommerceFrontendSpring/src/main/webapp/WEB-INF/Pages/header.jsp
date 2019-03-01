@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title> ${pageinfo}-GuptaStore </title>
+<title> Ecommerce Store </title>
 
 <meta name=viewport content="width=device-width , intial-scale=1">
 
@@ -15,22 +15,21 @@
 </head>
 <body>
 <div style="bg-color:red">
-<div class="container">
+<div class="container-fluid">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
            <div class="navbar-header"> 
-               <a class="navbar-brand" href="#"> GuptaStore </a>
+               <a class="navbar-brand" href="#"></a>
            </div>
-<marquee style="font-family: Impact; font-size: 12pt; color:white">All Branded products are available here</marquee>
 
       <c:if test="${!sessionScope.loggedIn}">
            <ul class="nav navbar-nav"> 
-             <li> <a href="<c:url value="/index" />"> HOME </a></li>
+             <li> <a href="<c:url value="/home" />"> HOME </a></li>
              <li> <a href="<c:url value="/login" />"> LOGIN  </a></li>
              <li> <a href="<c:url value="/register" />"> REGISTER </a></li>
              <li> <a href="<c:url value="/aboutus" />"> ABOUT US </a></li>
              <li> <a href="<c:url value="/contactus" />"> Contact US </a></li>
-             
+             <li> <a href="<c:url value="#" />"> Ecommerce-Store </a></li>
              </ul>
            </c:if>
            <c:if test="${sessionScope.loggedIn}">
@@ -44,7 +43,7 @@
            						</c:if>
            		<c:if test="${sessionScope.role=='ROLE_USER'}">
            			<ul class="nav navbar-nav">
-           			<li> <a href="<c:url value="/userhome" />"> Home </a></li>
+           			<li> <a href="<c:url value="/home" />"> Home </a></li>
              			<li> <a href="<c:url value="/productDisplay" />"> PRODUCT CATALOG </a></li>
            					  			<li> <a href="<c:url value="/cart" />"> CART </a></li>
            					</ul>

@@ -9,49 +9,42 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<style >
-.thumbnail {
-    max-height:250px;
-    max-width:100%;
-}
-
+<style>
 
 </style>
 </head>
 <body>
+<div class="row" style="margin-top:25px">
 
 	<c:forEach var="product" items="${pList}" varStatus="status">
 
-		<div class="col-sm-4 col-md-4 ">
-		<!-- <div class="row display-flex"> -->
-			<div class="thumbnail">
-
-
-				<spring:url value="/resources/img/${product.productId}.jpg"
+	<div class="col-sm-4 col-md-4 ">
+		<div class="thumbnail" >
+			
+			
+			<spring:url value="/resources/img/${product.productId}.jpg"
 					var="imgs" />
-				<img style="min-height:100px; width:50%;" src="${imgs}" class="img-responsive"  />
-			</div>
-
+				<img style="height:250px; width: 250px;" src="${imgs}"/>
+			
 			<div class="caption">
-
 				<h4>
 					<strong>${product.price}</strong>
 				</h4>
 				<h4>
 					<strong>${product.productName}</strong>
 				</h4>
-
-
 				<p>
-
 					<a href="productDetails?Id=${product.productId}"
 						class="btn btn-primary" role="button"> VIEW DETAILS </a>
-
 				</p>
 
 			</div>
+			
 		</div>
 		</div>
+
 	</c:forEach>
+	</div>
+	
 </body>
 </html>

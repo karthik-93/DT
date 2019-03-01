@@ -33,7 +33,7 @@ public class UserTestCase {
 		user = context.getBean(User.class);
 	}
 	
-	
+	@Ignore
 	@Test
 	public void insertUser() {
 		user.setUsername("Madhan");
@@ -56,25 +56,28 @@ public class UserTestCase {
 		}
 
 	}
-
+	
+	
+//
 	@Ignore
 	@Test
 	public void updateUser() {
-		User user = userDao.getUserByUserName(1);
-		user.setUsername("Mahesh");
+		User user = userDao.getUserByUserName("Madhan");
+		user.setPassword("pass@123");
+		user.setPassword("4th floor siva enclaves mugeshpalya,marathalli bangalore  karnataka");
 		userDao.updateUser(user);
 		//assertEquals("problem in updating user", 2500, product.getPrice());
 
 	}
 
-	@Ignore
-	@Test
-	public void deleteUser() {
-		User user = userDao.getUserByUserName(4);
-		userDao.deleteUser(user);
-		System.out.println("Deleted successfully");
-
-	}
+//	@Ignore
+//	@Test
+//	public void deleteUser() {
+//		User user = userDao.getUserByUserName(4);
+//		userDao.deleteUser(user);
+//		System.out.println("Deleted successfully");
+//
+//	}
 
 
 }

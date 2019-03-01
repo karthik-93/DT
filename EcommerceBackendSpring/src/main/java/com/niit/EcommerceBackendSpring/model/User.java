@@ -12,8 +12,6 @@ import org.springframework.stereotype.Component;
 public class User {
 	
 	@Id
-	@GeneratedValue
-	int userId;
 	String username;
 	String password;
 	String role; 
@@ -21,12 +19,7 @@ public class User {
 	String emailId;
 	String customerAddr;
 	
-	public int getUserId() {
-		return userId;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
+	
 	public String getUsername() {
 		return username;
 	}

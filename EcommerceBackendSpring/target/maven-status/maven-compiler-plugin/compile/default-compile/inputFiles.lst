@@ -6,6 +6,7 @@ C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\ni
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\SupplierDao.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\CategoryDaoImpl.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\SupplierDaoImpl.java
+C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\OrderDaoImpl.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\CategoryDao.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\model\Category.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\config\ApplicationContextConfig.java
@@ -13,5 +14,7 @@ C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\ni
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\CartDao.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\model\Supplier.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\UserDao.java
+C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\model\Orders.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\model\Product.java
+C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\OrderDao.java
 C:\Users\MBG\Desktop\Project Updated\EcommerceBackendSpring\src\main\java\com\niit\EcommerceBackendSpring\dao\ProductDao.java

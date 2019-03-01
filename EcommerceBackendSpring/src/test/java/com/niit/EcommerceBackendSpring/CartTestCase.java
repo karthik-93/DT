@@ -15,6 +15,7 @@ import com.niit.EcommerceBackendSpring.dao.CartDao;
 import com.niit.EcommerceBackendSpring.model.Cart;
 
 
+
 public class CartTestCase {
 
 	@Autowired
@@ -35,18 +36,18 @@ public class CartTestCase {
 		cart = context.getBean(Cart.class);
 	}
 	
-	@Ignore
+	
 	@Test
 	public void addCart() {
-		cart.setCartId(001);
-		cart.setPaymentStatus("completed");
-		cart.setPrice(2563);
+	//cart.setCartId(001);
+		cart.setPaymentStatus("Not paid");
+		cart.setPrice(9000);
 		cart.setProductId(2);
 		cart.setQuantity(2);
 		cart.setProductName("Shirts");
 		cart.setUsername("Karthik");	
-		boolean res = cartDao.addCartItem(cart);
-		assertTrue("adding cart failed", cartDao.addCartItem(cart));
+		
+		assertEquals("adding cart failed",true,cartDao.addCartItem(cart));
 	}
 	
 	@Ignore
@@ -68,10 +69,17 @@ public class CartTestCase {
 	@Ignore
 	@Test
 	public void listCart() {
-		Cart cart = new Cart();
-		List<Cart> li = cartDao.listCartItems("Karthik");
-		for(Cart c:li) {
-			System.out.println(c.getPaymentStatus());
+		List<Cart> listCart = cartDao.listCartItems("username");
+		assertTrue("Problem in displaying CartItems", listCart.size()>0);
+		
+		for(Cart cartItem:listCart)
+		{
+			System.out.println("CartItem Id:" + cartItem.getProductId()+" \t");
+			System.out.println("ProductName:" + cartItem.getProductName()+" \t");
+			System.out.println("ProductPrice:" + cartItem.getPrice()+" \t");
+			System.out.println("Quantity:" + cartItem.getQuantity()+" \t");
+			System.out.println("TotalPrice:" + cartItem.getPrice()*cartItem.getQuantity());
+			System.out.println("------------------------------------");
 		}
 	}
 	

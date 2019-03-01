@@ -33,6 +33,7 @@ public class UserDaoImpl implements UserDao {
 	public boolean registerUser(User user) {
 		try {
 			user.setRole("ROLE_USER");
+			user.setEnabled(true);
 			sessionFactory.getCurrentSession().saveOrUpdate(user);
 			return true;
 		} catch (Exception e) {
@@ -54,12 +55,14 @@ public class UserDaoImpl implements UserDao {
 		return sessionFactory.getCurrentSession().createQuery("From User").list();
 	}
 
-	public User getUserByUserName(int userId) {
+	public User getUserByUserName(String username ) {
 		Session session = sessionFactory.openSession();
-		User user = (User) session.get(User.class, userId);
-
+		User user = (User) session.get(User.class, username);
+session.close();
 		return user;
+		
 	}
+	
 
 	public boolean deleteUser(User user) {
 		try {

@@ -33,8 +33,8 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
-	<%@include file="Carousel1.jsp"%>
-	<%@include file="Products.jsp"%>
+<%@include file="Carousel1.jsp"%>
+<%@include file="Products.jsp"%>
 	
 	
 

@@ -52,7 +52,7 @@ public class ProductController {
 	@Autowired
 	CartDao cartDao;
 
-	@RequestMapping("/hom1")
+	@RequestMapping("/home")
 	public ModelAndView displayIndex() {
 		ModelAndView mv = new ModelAndView("index");
 		List<Product> plist = productDao.listProducts();
@@ -70,15 +70,12 @@ public class ProductController {
 		return mv;
 	}
 
-	@RequestMapping("register")
-	public String registerMethod() {
-		return "register";
-	}
+	
 
-	@RequestMapping("/home")
-	public String homeReturn() {
-		return "index";
-	}
+//	@RequestMapping("/home")
+//	public String homeReturn() {
+//		return "home";
+//	}
 
 //	@RequestMapping("/login")
 //	public String loginReturn() {
@@ -278,17 +275,7 @@ public class ProductController {
 			return "Admintask";
 		}
 	
-	@RequestMapping("tableCart")
-	public String displayCart(@RequestParam(value="Id",required=true) int productId) {
-		List<Cart> ctList = cartDao.listCartItems(username);
-		int cnt = ctList.size();
-		cnt = cnt+1;
-		cart.setCartId(cnt);
-		cart.setProductId(productId);
-		cart.setPrice(product.getPrice());
-		cartDao.addCartItem(cart);
-		return "redirect:prodETAIL?Id="+productId;
-	}
+	
 
 }
 

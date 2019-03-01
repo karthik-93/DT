@@ -4,8 +4,10 @@ com\niit\EcommerceBackendSpring\dao\CartDao.class
 com\niit\EcommerceBackendSpring\dao\UserDaoImpl.class
 com\niit\EcommerceBackendSpring\config\ApplicationContextConfig.class
 com\niit\EcommerceBackendSpring\dao\CategoryDaoImpl.class
+com\niit\EcommerceBackendSpring\model\Orders.class
 com\niit\EcommerceBackendSpring\model\Category.class
 com\niit\EcommerceBackendSpring\dao\SupplierDao.class
+com\niit\EcommerceBackendSpring\dao\OrderDao.class
 com\niit\EcommerceBackendSpring\dao\CategoryDao.class
 com\niit\EcommerceBackendSpring\dao\ProductDaoImpl.class
 com\niit\EcommerceBackendSpring\model\Product.class
@@ -13,5 +15,6 @@ com\niit\EcommerceBackendSpring\dao\ProductDao.class
 com\niit\EcommerceBackendSpring\model\Cart.class
 com\niit\EcommerceBackendSpring\dao\SupplierDaoImpl.class
 com\niit\EcommerceBackendSpring\dao\UserDao.class
+com\niit\EcommerceBackendSpring\dao\OrderDaoImpl.class
 com\niit\EcommerceBackendSpring\model\Supplier.class
 com\niit\EcommerceBackendSpring\dao\CartDaoImpl.class
